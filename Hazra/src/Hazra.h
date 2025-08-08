@@ -4,6 +4,7 @@
 
 #include <stdio.h>
 #include "Hazra/Application.h"
+#include "Hazra/Log.h"
 
 // ---Entry Point-------------------
 #include "Hazra/EntryPoint.h"

@@ -2,7 +2,7 @@
 #include "Core.h"
 
 namespace Hazra {
-	class HAZRA_API Application
+	class HZ_API Application
 	{
 	public:
 		Application();
