@@ -33,7 +33,7 @@ namespace Hazra
 #define HZ_FATAL(...)			::Hazra::Log::GetClientLogger()->fatal(__VA_ARGS__)
 
 // if dist build
-#ifdef HZ_DIST_BUILD
+#ifdef HZ_DIST
 #define HZ_CORE_TRACE(...)
 #define HZ_CORE_INFO(...)
 #define HZ_CORE_WARN(...)
