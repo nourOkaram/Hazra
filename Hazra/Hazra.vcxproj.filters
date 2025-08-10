@@ -4,6 +4,9 @@
     <Filter Include="Hazra">
       <UniqueIdentifier>{3B2B4D0D-A73F-75BE-70C1-181EDC9471EF}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Hazra\Events">
+      <UniqueIdentifier>{BF8610C2-ABE9-9F66-546F-D81C40B16BE9}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Hazra.h" />
@@ -15,6 +18,18 @@
     </ClInclude>
     <ClInclude Include="src\Hazra\EntryPoint.h">
       <Filter>Hazra</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Hazra\Events\ApplicationEvent.h">
+      <Filter>Hazra\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Hazra\Events\Event.h">
+      <Filter>Hazra\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Hazra\Events\KeyEvent.h">
+      <Filter>Hazra\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Hazra\Events\MouseEvent.h">
+      <Filter>Hazra\Events</Filter>
     </ClInclude>
     <ClInclude Include="src\Hazra\Log.h">
       <Filter>Hazra</Filter>
