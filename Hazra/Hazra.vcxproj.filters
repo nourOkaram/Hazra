@@ -34,6 +34,7 @@
     <ClInclude Include="src\Hazra\Log.h">
       <Filter>Hazra</Filter>
     </ClInclude>
+    <ClInclude Include="src\hzpch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Hazra\Application.cpp">
@@ -42,5 +43,6 @@
     <ClCompile Include="src\Hazra\Log.cpp">
       <Filter>Hazra</Filter>
     </ClCompile>
+    <ClCompile Include="src\hzpch.cpp" />
   </ItemGroup>
 </Project>

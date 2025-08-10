@@ -1,8 +1,7 @@
 #pragma once
-#include "Hazra/Core.h"
 
-#include <string>
-#include <functional>
+#include "hzpch.h"
+#include "Hazra/Core.h"
 
 namespace Hazra
 {
