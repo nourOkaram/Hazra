@@ -11,6 +11,13 @@ workspace "Hazra"
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
+-- Include directories relative to root folder (solution directory)
+IncludeDir = {}
+IncludeDir["spdlog"] =	"Hazra/vendor/spdlog/include"
+IncludeDir["GLFW"] =	"Hazra/vendor/GLFW/include"
+
+include "Hazra/vendor/GLFW"
+
 project "Hazra"
 	location "Hazra"
 	kind "SharedLib"
@@ -30,8 +37,15 @@ project "Hazra"
 
 	includedirs
 	{
-		"%{prj.name}/vendor/spdlog/include",
-		"%{prj.name}/src"
+		"%{prj.name}/src",
+		"%{IncludeDir.spdlog}",
+		"%{IncludeDir.GLFW}"
+	}
+
+	links
+	{
+		"GLFW",
+		"opengl32.lib"
 	}
 
 	filter "system:windows"
