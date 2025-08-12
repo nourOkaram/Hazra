@@ -1,13 +1,16 @@
 #include "hzpch.h"
 #include "Application.h"
-#include "Hazra/Events/ApplicationEvent.h"
 #include "Hazra/Log.h"
 #include <GLFW/glfw3.h>
 
 namespace Hazra {
+
+#define BIND_EVENT_FN(fn) std::bind(&Application::fn, this, std::placeholders::_1)
+
 	Application::Application()
 	{
 		m_Window = std::unique_ptr<Window>(Window::Create());
+		m_Window->SetEventCallBack(BIND_EVENT_FN(OnEvent));
 	}
 	
 	Application::~Application()
@@ -23,4 +26,20 @@ namespace Hazra {
 			m_Window->OnUpdate();
 		}
 	}
+
+	bool Application::OnWindowClose(WindowCloseEvent& e)
+	{
+		m_Running = false;
+		return true;
+	}
+
+	void Application::OnEvent(Event& e)
+	{
+		EventDispatcher dispatcher(e);
+		dispatcher.Dispatch<WindowCloseEvent>(BIND_EVENT_FN(OnWindowClose));
+
+		HZ_CORE_INFO("{0}", e);
+	}
+
+	
 }

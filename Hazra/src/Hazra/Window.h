@@ -2,7 +2,7 @@
 #include "hzpch.h"
 
 #include "Core.h"
-#include "Events/Event.h"
+#include "Hazra/Events/Event.h"
 
 namespace Hazra
 {
