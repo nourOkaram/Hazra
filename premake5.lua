@@ -15,8 +15,10 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 IncludeDir = {}
 IncludeDir["spdlog"] =	"Hazra/vendor/spdlog/include"
 IncludeDir["GLFW"] =	"Hazra/vendor/GLFW/include"
+IncludeDir["Glad"] =	"Hazra/vendor/Glad/include"
 
 include "Hazra/vendor/GLFW"
+include "Hazra/vendor/Glad"
 
 project "Hazra"
 	location "Hazra"
@@ -39,12 +41,14 @@ project "Hazra"
 	{
 		"%{prj.name}/src",
 		"%{IncludeDir.spdlog}",
-		"%{IncludeDir.GLFW}"
+		"%{IncludeDir.GLFW}",
+		"%{IncludeDir.Glad}"
 	}
 
 	links
 	{
 		"GLFW",
+		"Glad",
 		"opengl32.lib"
 	}
 
@@ -57,7 +61,8 @@ project "Hazra"
 		defines
 		{
 			"HZ_PLATFORM_WINDOWS",
-			"HZ_BUILD_DLL"
+			"HZ_BUILD_DLL",
+			"GLFW_INCLUDE_NONE"
 		}
 
 		postbuildcommands {
@@ -70,6 +75,9 @@ project "Hazra"
 		defines { "HZ_DEBUG" }
 		buildoptions "/MDd"
 		symbols "On"
+
+	filter {"configurations:Debug", "system:windows"}
+		defines { "HZ_ENABLE_ASSERTS" }
 
 	filter "configurations:Release"
 		defines { "HZ_RELEASE" }
@@ -99,7 +107,7 @@ project "Sandbox"
 
 	includedirs
 	{
-		"Hazra/vendor/spdlog/include",
+		"%{IncludeDir.spdlog}",
 		"Hazra/src"
 	}
 
