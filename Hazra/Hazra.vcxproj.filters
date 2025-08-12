@@ -37,6 +37,12 @@
     <ClInclude Include="src\Hazra\Events\MouseEvent.h">
       <Filter>Hazra\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\Hazra\Layer.h">
+      <Filter>Hazra</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Hazra\LayerStack.h">
+      <Filter>Hazra</Filter>
+    </ClInclude>
     <ClInclude Include="src\Hazra\Log.h">
       <Filter>Hazra</Filter>
     </ClInclude>
@@ -50,6 +56,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Hazra\Application.cpp">
+      <Filter>Hazra</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Hazra\Layer.cpp">
+      <Filter>Hazra</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Hazra\LayerStack.cpp">
       <Filter>Hazra</Filter>
     </ClCompile>
     <ClCompile Include="src\Hazra\Log.cpp">

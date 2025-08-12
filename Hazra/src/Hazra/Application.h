@@ -1,8 +1,9 @@
 #pragma once
 #include "Core.h"
+#include "Window.h"
+#include "Hazra/LayerStack.h"
 #include "Hazra/Events/Event.h"
 #include "Hazra/Events/ApplicationEvent.h"
-#include "Window.h"
 
 namespace Hazra {
 	class HZ_API Application
@@ -14,11 +15,15 @@ namespace Hazra {
 		void Run();
 
 		void OnEvent(Event& e);
+
+		void PushLayer(Layer* layer);
+		void PushOverLay(Layer* overlay);
 	private:
 		bool OnWindowClose(WindowCloseEvent& e);
 
 		std::unique_ptr<Window> m_Window;
 		bool m_Running = true;
+		LayerStack m_LayerStack;
 	};
 
 	// To be defined in CLIENT

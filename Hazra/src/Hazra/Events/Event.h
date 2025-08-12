@@ -43,6 +43,8 @@ namespace Hazra
 	{
 		friend class EventDispatcher;
 	public:
+		bool Handled = false;
+
 		virtual ~Event() = default;
 
 		virtual EventType GetEventType() const = 0;
@@ -54,8 +56,6 @@ namespace Hazra
 		{
 			return GetCategoryFlags() & category;
 		}
-	protected:
-		bool m_Handled = false;
 	};
 
 	class EventDispatcher
@@ -72,7 +72,7 @@ namespace Hazra
 		{
 			if (m_Event.GetEventType() == T::GetStaticType())
 			{
-				m_Event.m_Handled = func(*(T*)&m_Event);
+				m_Event.Handled = func(*(T*)&m_Event);
 				return true;
 			}
 			return false;
