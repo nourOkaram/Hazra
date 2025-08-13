@@ -1,5 +1,4 @@
 #include <Hazra.h>
-
 class ExampleLayer : public Hazra::Layer
 {
 public:
@@ -25,6 +24,7 @@ public:
 	Sandbox()
 	{
 		PushLayer(new ExampleLayer());
+		PushOverLay(new Hazra::ImGuiLayer());
 	}
 	~Sandbox()
 	{
