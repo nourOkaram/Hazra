@@ -1,6 +1,6 @@
 #pragma once
 #ifdef HZ_PLATFORM_WINDOWS
-
+#include "Hazra/Application.h"
 extern Hazra::Application* Hazra::CreateApplication();
 
 int main(int argc, char** argv)
