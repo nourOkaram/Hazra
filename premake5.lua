@@ -18,9 +18,11 @@ IncludeDir["GLFW"] =	"Hazra/vendor/GLFW/include"
 IncludeDir["Glad"] =	"Hazra/vendor/Glad/include"
 IncludeDir["ImGui"] =	"Hazra/vendor/imgui"
 
-include "Hazra/vendor/GLFW"
-include "Hazra/vendor/Glad"
-include "Hazra/vendor/imgui"
+group "Dependencies"
+	include "Hazra/vendor/GLFW"
+	include "Hazra/vendor/Glad"
+	include "Hazra/vendor/imgui"
+group ""
 
 project "Hazra"
 	location "Hazra"
@@ -70,8 +72,7 @@ project "Hazra"
 		}
 
 		postbuildcommands {
-			"{MKDIR} ../bin/" .. outputdir .. "/Sandbox",
-		    "{COPY} %{cfg.buildtarget.relpath} ../bin/" .. outputdir .. "/Sandbox"
+		    ("{COPY} %{cfg.buildtarget.relpath} \"../bin/" .. outputdir .. "/Sandbox/\"")
 		}
 
 
