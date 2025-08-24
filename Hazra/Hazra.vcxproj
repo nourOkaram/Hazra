@@ -165,9 +165,11 @@
     <ClInclude Include="src\Hazra\Events\MouseEvent.h" />
     <ClInclude Include="src\Hazra\ImGui\ImGuiLayer.h" />
     <ClInclude Include="src\Hazra\Input.h" />
+    <ClInclude Include="src\Hazra\KeyCodes.h" />
     <ClInclude Include="src\Hazra\Layer.h" />
     <ClInclude Include="src\Hazra\LayerStack.h" />
     <ClInclude Include="src\Hazra\Log.h" />
+    <ClInclude Include="src\Hazra\MouseButtonCodes.h" />
     <ClInclude Include="src\Hazra\Window.h" />
     <ClInclude Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.h" />
     <ClInclude Include="src\Platform\Windows\WindowsInput.h" />

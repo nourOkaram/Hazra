@@ -67,6 +67,8 @@
     <ClInclude Include="src\hzpch.h" />
     <ClInclude Include="src\Hazra\Input.h" />
     <ClInclude Include="src\Platform\Windows\WindowsInput.h" />
+    <ClInclude Include="src\Hazra\KeyCodes.h" />
+    <ClInclude Include="src\Hazra\MouseButtonCodes.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Hazra\Application.cpp">
