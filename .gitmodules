@@ -7,3 +7,6 @@
 [submodule "Hazra/vendor/imgui"]
 	path = Hazra/vendor/imgui
 	url = https://github.com/nourOkaram/imgui
+[submodule "Hazra/vendor/glm"]
+	path = Hazra/vendor/glm
+	url = https://github.com/g-truc/glm

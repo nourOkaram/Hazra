@@ -17,6 +17,7 @@ IncludeDir["spdlog"] =	"Hazra/vendor/spdlog/include"
 IncludeDir["GLFW"] =	"Hazra/vendor/GLFW/include"
 IncludeDir["Glad"] =	"Hazra/vendor/Glad/include"
 IncludeDir["ImGui"] =	"Hazra/vendor/imgui"
+IncludeDir["glm"] =	"Hazra/vendor/glm"
 
 group "Dependencies"
 	include "Hazra/vendor/GLFW"
@@ -39,7 +40,9 @@ project "Hazra"
 	files
 	{
 		"%{prj.name}/src/**.h",
-		"%{prj.name}/src/**.cpp"
+		"%{prj.name}/src/**.cpp",
+		"%{prj.name}/vendor/glm/glm/**.hpp",
+		"%{prj.name}/vendor/glm/glm/**.inl"
 	}
 
 	includedirs
@@ -49,6 +52,7 @@ project "Hazra"
 		"%{IncludeDir.GLFW}",
 		"%{IncludeDir.Glad}",
 		"%{IncludeDir.ImGui}",
+		"%{IncludeDir.glm}"
 	}
 
 	links
@@ -111,6 +115,7 @@ project "Sandbox"
 	includedirs
 	{
 		"%{IncludeDir.spdlog}",
+		"%{IncludeDir.glm}",
 		"Hazra/src"
 	}
 
