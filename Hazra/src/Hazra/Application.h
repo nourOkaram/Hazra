@@ -5,6 +5,8 @@
 #include "Hazra/Events/Event.h"
 #include "Hazra/Events/ApplicationEvent.h"
 
+#include "Hazra/ImGui/ImGuiLayer.h"
+
 namespace Hazra {
 	class HZ_API Application
 	{
@@ -25,6 +27,7 @@ namespace Hazra {
 		bool OnWindowClose(WindowCloseEvent& e);
 
 		std::unique_ptr<Window> m_Window;
+		ImGuiLayer* m_ImGuiLayer;
 		bool m_Running = true;
 		LayerStack m_LayerStack;
 

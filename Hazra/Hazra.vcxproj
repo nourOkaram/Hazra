@@ -171,7 +171,6 @@
     <ClInclude Include="src\Hazra\Log.h" />
     <ClInclude Include="src\Hazra\MouseButtonCodes.h" />
     <ClInclude Include="src\Hazra\Window.h" />
-    <ClInclude Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.h" />
     <ClInclude Include="src\Platform\Windows\WindowsInput.h" />
     <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
     <ClInclude Include="src\hzpch.h" />
@@ -596,11 +595,11 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Hazra\Application.cpp" />
+    <ClCompile Include="src\Hazra\ImGui\ImGuiBuild.cpp" />
     <ClCompile Include="src\Hazra\ImGui\ImGuiLayer.cpp" />
     <ClCompile Include="src\Hazra\Layer.cpp" />
     <ClCompile Include="src\Hazra\LayerStack.cpp" />
     <ClCompile Include="src\Hazra\Log.cpp" />
-    <ClCompile Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.cpp" />
     <ClCompile Include="src\Platform\Windows\WindowsInput.cpp" />
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
     <ClCompile Include="src\hzpch.cpp">

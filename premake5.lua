@@ -116,6 +116,7 @@ project "Sandbox"
 	{
 		"%{IncludeDir.spdlog}",
 		"%{IncludeDir.glm}",
+		"Hazra/vendor",
 		"Hazra/src"
 	}
 

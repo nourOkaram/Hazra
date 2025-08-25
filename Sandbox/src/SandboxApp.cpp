@@ -1,4 +1,6 @@
 #include <Hazra.h>
+
+#include "imgui/imgui.h"
 class ExampleLayer : public Hazra::Layer
 {
 public:
@@ -11,6 +13,13 @@ public:
 		{
 			HZ_TRACE("Tab key is pressed (poll)!");
 		}
+	}
+
+	virtual void OnImGuiRender() override
+	{
+		ImGui::Begin("Example Layer");
+		ImGui::Text("Hello, World!");
+		ImGui::End();
 	}
 
 	void OnEvent(Hazra::Event& event) override
@@ -36,7 +45,6 @@ public:
 	Sandbox()
 	{
 		PushLayer(new ExampleLayer());
-		PushOverLay(new Hazra::ImGuiLayer());
 	}
 	~Sandbox()
 	{
